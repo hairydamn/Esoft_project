@@ -16,7 +16,6 @@ namespace Esoft_project
         {
             InitializeComponent();
         }
-
         private void ButtonOpenClients_Click(object sender, EventArgs e)
         {
             Form formClient = new FormClient();

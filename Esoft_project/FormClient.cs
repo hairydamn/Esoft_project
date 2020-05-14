@@ -29,20 +29,18 @@ namespace Esoft_project
             Program.wftDb.Client.Add(clientSet);
             Program.wftDb.SaveChanges();
             ShowClient();
-
         }
-
         void ShowClient()
         {
             listViewClient.Items.Clear();
-            foreach (Client clientsSet in Program.wftDb.Client)
+            foreach (Client clientSet in Program.wftDb.Client)
             {
                 ListViewItem item = new ListViewItem(new string[]
                 {
-                    clientsSet.ID.ToString(), clientsSet.FirstName, clientsSet.MiddleName,
-                    clientsSet.LastName, clientsSet.Phone, clientsSet.Email
+                    clientSet.ID.ToString(), clientSet.FirstName, clientSet.MiddleName,
+                    clientSet.LastName, clientSet.Phone, clientSet.Email
                 });
-                item.Tag = clientsSet;
+                item.Tag = clientSet;
                 listViewClient.Items.Add(item);
             }
             listViewClient.AutoResizeColumns(ColumnHeaderAutoResizeStyle.HeaderSize);
@@ -158,6 +156,11 @@ namespace Esoft_project
         }
 
         private void LabelEmail_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void PictureBox1_Click(object sender, EventArgs e)
         {
 
         }

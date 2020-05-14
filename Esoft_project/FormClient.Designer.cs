@@ -28,12 +28,19 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormClient));
             this.textBoxFirstName = new System.Windows.Forms.TextBox();
             this.textBoxMiddleName = new System.Windows.Forms.TextBox();
             this.textBoxLastName = new System.Windows.Forms.TextBox();
             this.textBoxPhone = new System.Windows.Forms.TextBox();
             this.textBoxEmail = new System.Windows.Forms.TextBox();
             this.listViewClient = new System.Windows.Forms.ListView();
+            this.ID = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.FirstName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.MiddleName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.LastName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.Phone = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.Email = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.buttonAdd = new System.Windows.Forms.Button();
             this.buttonEdit = new System.Windows.Forms.Button();
             this.buttonDel = new System.Windows.Forms.Button();
@@ -42,12 +49,8 @@
             this.labelLastName = new System.Windows.Forms.Label();
             this.labelPhone = new System.Windows.Forms.Label();
             this.labelEmail = new System.Windows.Forms.Label();
-            this.ID = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.FirstName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.MiddleName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.LastName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.Phone = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.Email = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // textBoxFirstName
@@ -99,6 +102,7 @@
             this.LastName,
             this.Phone,
             this.Email});
+            this.listViewClient.FullRowSelect = true;
             this.listViewClient.GridLines = true;
             this.listViewClient.HideSelection = false;
             this.listViewClient.Location = new System.Drawing.Point(137, 37);
@@ -108,7 +112,31 @@
             this.listViewClient.TabIndex = 10;
             this.listViewClient.UseCompatibleStateImageBehavior = false;
             this.listViewClient.View = System.Windows.Forms.View.Details;
-            this.listViewClient.SelectedIndexChanged += new System.EventHandler(this.ListViewClient_SelectedIndexChanged);
+            this.listViewClient.SelectedIndexChanged += new System.EventHandler(this.listViewClient_SelectedIndexChanged);
+            // 
+            // ID
+            // 
+            this.ID.Text = "ID";
+            // 
+            // FirstName
+            // 
+            this.FirstName.Text = "Имя";
+            // 
+            // MiddleName
+            // 
+            this.MiddleName.Text = "Отчество";
+            // 
+            // LastName
+            // 
+            this.LastName.Text = "Фамилия";
+            // 
+            // Phone
+            // 
+            this.Phone.Text = "Телефон";
+            // 
+            // Email
+            // 
+            this.Email.Text = "Почта";
             // 
             // buttonAdd
             // 
@@ -190,35 +218,22 @@
             this.labelEmail.Text = "Почта";
             this.labelEmail.Click += new System.EventHandler(this.LabelEmail_Click);
             // 
-            // ID
+            // pictureBox1
             // 
-            this.ID.Text = "ID";
-            // 
-            // FirstName
-            // 
-            this.FirstName.Text = "Имя";
-            // 
-            // MiddleName
-            // 
-            this.MiddleName.Text = "Отчество";
-            // 
-            // LastName
-            // 
-            this.LastName.Text = "Фамилия";
-            // 
-            // Phone
-            // 
-            this.Phone.Text = "Телефон";
-            // 
-            // Email
-            // 
-            this.Email.Text = "Почта";
+            this.pictureBox1.Image = global::Esoft_project.Properties.Resources.logo;
+            this.pictureBox1.Location = new System.Drawing.Point(413, 355);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(307, 106);
+            this.pictureBox1.TabIndex = 19;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.PictureBox1_Click);
             // 
             // FormClient
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(684, 461);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.listViewClient);
             this.Controls.Add(this.labelEmail);
             this.Controls.Add(this.labelPhone);
@@ -233,9 +248,12 @@
             this.Controls.Add(this.textBoxLastName);
             this.Controls.Add(this.textBoxMiddleName);
             this.Controls.Add(this.textBoxFirstName);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormClient";
-            this.Text = "FormClient";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Клиенты";
             this.Load += new System.EventHandler(this.FormClient_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -263,5 +281,6 @@
         private System.Windows.Forms.ColumnHeader LastName;
         private System.Windows.Forms.ColumnHeader Phone;
         private System.Windows.Forms.ColumnHeader Email;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
