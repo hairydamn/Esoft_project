@@ -10,11 +10,42 @@ using System.Windows.Forms;
 
 namespace Esoft_project
 {
-    public partial class Form1 : Form
+    public partial class Menu : Form
     {
-        public Form1()
+        public Menu()
         {
             InitializeComponent();
+        }
+
+        private void ButtonOpenClients_Click(object sender, EventArgs e)
+        {
+            Form formClient = new FormClient();
+            formClient.Show();
+        }
+
+        private void ButtonOpenAgents_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ButtonOpenRealEstates_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ButtonOpenDemands_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ButtonOpenSupplies_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ButtonOpenDeals_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
