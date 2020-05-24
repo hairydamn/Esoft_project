@@ -8,7 +8,7 @@ namespace Esoft_project
 {
     static class Program
     {
-        public static Esoft_projectEntities wftDb = new Esoft_projectEntities();
+        public static Esoft_projectEntities7 wftDb = new Esoft_projectEntities7();
         /// <summary>
         /// Главная точка входа для приложения.
         /// </summary>
@@ -17,7 +17,7 @@ namespace Esoft_project
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Menu());
+            Application.Run(new FormUsers());
         }
     }
 }
